@@ -1,0 +1,48 @@
+---
+title: "Week 1 Assignment"
+author: "Francisco Martín"
+date: "October 23, 2018"
+output: html_document
+---
+
+## Introduction
+
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!
+
+
+## Best europe footbal stadiums
+
+
+I like football a lot. And always is useful to have a guide of were best team' stadiums are. 
+I let it here for who wants to see it!:
+
+``` {r mapping}
+
+library(leaflet)
+
+footballIcon <- makeIcon(
+        iconUrl <- "http://pngimg.com/uploads/football/football_PNG52797.png",
+        iconWidth = 25*215/230, iconHeight = 25, iconAnchorX = 25*215/230/2, iconAnchorY = 12
+)
+
+mydf <- data.frame(StadiumName = c("Santiago Bernabeu", "Camp Nou","Giussepe Meazza","Parc des Princes",
+                                   "Juventus Stadium","Signal Iduna Park","Allianz Arena","Old Trafford",
+                                   "Stamford Bridge","Estadio do Dragão","Johan Cruijff Arena","Anfield"),
+                   lat = c(40.4530541,41.38096,45.47808,48.841436,45.105666244,51.49260657816879,48.218679,53.463059,
+                           51.475664764,41.161533355713,52.3143713,53.4308278),
+                   long = c(3.6883445, 2.12283,9.124,2.253049,7.637997448,7.451777458190918,11.623765,-2.291340, 
+                           -0.187999248,-8.5836696624756,4.9419641,-2.9608472),
+                   stringsAsFactors = FALSE)
+ 
+
+
+
+my_map <- leaflet() %>%
+  addTiles()  %>% addMarkers(data = mydf, icon = footballIcon, lat=~lat, 
+             lng=~long, popup=~StadiumName)
+  my_map
+```

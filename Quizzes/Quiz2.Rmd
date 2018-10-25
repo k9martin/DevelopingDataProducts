@@ -1,0 +1,115 @@
+---
+title: "Quiz 2"
+author: "Francisco Martín"
+date: "October 23, 2018"
+output: html_document
+---
+
+## 1.-
+
+What is rmarkdown? (Check all that apply.)
+
+- A form of LaTeX typesetting.
+
+- A simplified format that, when interpreted, incorporates your R analysis into your document.   (Correct)
+
+- A format that can be interpreted into markdown (which is a simplified markup language).   (Correct)
+
+- A simplified XML format that can be interpreted into R.
+
+
+Explanation -> Theory
+
+## 2.-
+
+In rmarkdown presentations, in the options for code chunks, what command prevents the code from being repeated before results in the final interpreted document?
+
+
+- echo = FALSE    (Correct)
+
+- eval = FALSE
+
+- comment = FALSE
+
+- cache = FALSE
+
+
+Explanation -> Theory
+
+
+## 3.-
+
+In rmarkdown presentations, in the options for code chunks, what prevents the code from being interpreted?
+
+- eval = FALSE  (Correct)
+
+- run = FALSE
+
+- cache = FALSE
+
+- eval = NULL
+
+
+Explanation -> Theory
+
+
+## 4.-
+
+What is leaflet? (Check all that apply.)
+
+- An R package for creating 3D rendered isomaps
+
+- An R package interface to the javascript library of the same name   (Correct)
+
+- A javascript library for creating interactive maps   (Correct)
+
+- A tool for reproducible documents
+
+
+Explanation -> Theory
+
+
+
+
+## 5.-
+
+The R command
+
+```{r eval=FALSE}
+df %>% leaflet() %>% addTiles()
+```
+
+is equivalent to what? (Check all that apply)
+
+- `leaflet(addTiles(df))`   
+
+- `df(leaflet(addTiles()))`
+
+- `addTiles(leaflet(df()))`
+
+- `addTiles(leaflet(df))`   (Correct)
+
+- `leaflet(df) %>% addTiles()`   (Correct)
+
+Explanation -> Pimp mark correspond to a concatenation of actions. 
+That's why they are equivalent.
+
+
+
+
+## 6.-
+
+If I want to add popup icons to my leaflet map in R, I should use.
+
+- dplyr
+
+- leaflet
+
+- addTiles
+
+- addMarkers  (Correct)
+
+
+Explanation -> Theory
+
+
